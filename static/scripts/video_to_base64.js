@@ -17,5 +17,6 @@ function call_camera(){
             video.src=window.webkitURL.createObjectURL(stream);  
             video.play();  
         },errocb);  
-    }   
+    }
 }
+

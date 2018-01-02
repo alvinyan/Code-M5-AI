@@ -67,8 +67,11 @@ def commitImageData():
  定义读取人像图片函数
 '''
 def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-        return fp.read()
+    try:
+        with open(filePath, 'rb') as fp:
+            return fp.read()
+    except IOError:
+        print('读取图片数据失败!')
 
 '''
  实现人脸特征检测
